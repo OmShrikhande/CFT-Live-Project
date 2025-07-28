@@ -18,6 +18,21 @@ build/
 .env.test.local
 .env.production.local
 
+# Secret configuration files
+config/secrets.js
+config/database.js
+config/jwt.js
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Authentication & Security
+auth/private-key.pem
+auth/public-key.pem
+secrets/
+certificates/
+
 # Logs
 logs
 *.log
