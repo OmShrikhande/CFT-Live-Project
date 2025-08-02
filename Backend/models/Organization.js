@@ -90,8 +90,7 @@ const organizationSchema = new mongoose.Schema({
   toObject: { virtuals: true }
 });
 
-// Indexes for better performance
-organizationSchema.index({ code: 1 });
+// Indexes for better performance (code index is already created by unique: true)
 organizationSchema.index({ superAdmin: 1 });
 organizationSchema.index({ admins: 1 });
 organizationSchema.index({ isActive: 1 });

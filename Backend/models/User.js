@@ -197,8 +197,7 @@ const userSchema = new mongoose.Schema({
   toObject: { virtuals: true }
 });
 
-// Indexes for better performance
-userSchema.index({ email: 1 });
+// Indexes for better performance (email index is already created by unique: true)
 userSchema.index({ organization: 1, role: 1 });
 userSchema.index({ assignedAdmin: 1 });
 userSchema.index({ status: 1 });
